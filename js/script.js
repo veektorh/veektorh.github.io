@@ -15,7 +15,7 @@ setTimeout(function(){
 
 //$('.home').hide();
 $('.profile-container').hide();
-$('.portfolio-container').hide();
+//$('.portfolio-container').hide();
 $('.contact-container').hide();
 
 $('.profile_link').click(function(){
