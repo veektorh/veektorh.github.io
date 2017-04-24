@@ -1,0 +1,515 @@
+
+@font-face{
+    font-family: sergio;
+    src: url(wf_segoe-ui_normal.ttf);
+}
+
+
+body{
+    background: whitesmoke;  
+    font-family: sergio;
+}
+
+.fa{
+/*    color: crimson;*/
+}
+.center{
+    margin: 1% auto;
+    width: 80%;
+}
+
+.first_row h1{
+    font-family: 'sergio';
+    font-size:300%;
+    text-align: left;
+}
+
+.first_row h2{
+    font-family: 'sergio';
+    display: inline;
+    font-size:250%;
+    text-align: left;
+}
+.first_row h3{
+    display: inline;
+    font-family: 'sergio';
+    font-size:250%;
+    text-align: left;
+}
+
+.image_container{
+    border-right:1px solid #ded8d8;
+}
+
+.image img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.box{
+    width: 100%;
+    height: 130px;
+    border: 1px solid #ded8d8;
+    border-radius: 5%;
+    padding: 10%;
+    margin: 5%;
+    background:whitesmoke;
+}
+
+.first_row{
+    padding-bottom: 2%;
+}
+
+
+.second_row{
+    margin-top: 5%;
+    padding: 5%;
+    border-bottom: 1px solid #ded8d8;
+    border-top: 1px solid #ded8d8;
+}
+.profile_container{
+    text-align: center;
+}
+.profile_container i{
+    position: relative;
+    width: 80%;
+    height: 100px
+}
+
+span{
+    opacity: 0;
+}
+.profile_container span{
+
+    font-family: sergio;
+    font-size: 110%;
+    color: black;
+    position: relative;
+    top:-17px;
+    opacity: 1;
+
+}
+.info h3{
+
+    font-family: sergio;
+    font-size: 150%;
+    color: black;
+    position: relative;
+    top:-17px;
+    opacity: 1;
+
+}
+a:hover{
+    text-decoration: none;
+}
+/*
+.box:hover{
+    background-color: whitesmoke;
+}
+.box:hover i{
+    opacity: 0;
+}
+.box:hover .image{
+    opacity: 0;
+}
+.box:hover span {  
+    opacity: 1;
+}
+*/
+
+.social_container{
+    margin-top: 50px;
+}
+.social_icon i{
+    font-size: 40px;
+    margin-right: 5px;
+    
+}
+
+.social_icon{
+    display: inline;
+    margin-top:1%;
+}
+
+.social_icon_footer i{
+    margin: 0 3px 0 0;
+    color: darkblue;
+    font-size: 170%;
+}
+.social_icon_footer p{
+    color: darkblue;
+    font-size: 110%;
+    display: inline-block;
+}
+
+.third_row{
+    padding: 1%;
+}
+
+.intro{
+
+    font-family: sergio;
+    font-size: 110%;
+
+}
+
+
+/************************************************************************
+
+    ************* Beginning of media query *************
+
+***************************************************************************
+*/
+
+@media (max-width: 770px) { 
+.image_container{
+    border-right:0px solid #ded8d8;
+    margin: 0 0 0 -24%;
+}
+    
+.home {
+    text-align: center;
+}
+    .image img{
+    border-radius: 50%;
+    width: 50%;
+}
+    .first_row h1{
+    font-family: 'sergio';
+    font-size:300%;
+    text-align: center;
+}
+
+
+.first_row h2{
+    font-family: 'sergio';
+    font-size:250%;
+    text-align: center;
+}
+
+.center{
+    width: 100%;
+}
+    
+.first_container{
+        margin: 0 0 0 20%;
+    }
+
+    .first_row{
+        margin: 0 0 0 -100px;
+    }
+    
+    .social_container{
+    font-size: 40px;
+    display: inline;
+    text-align: center;
+    
+}
+
+.box{
+    width: 70%;
+    height: 150px;
+    border: 1px solid #ded8d8;
+    border-radius: 5%;
+    padding: 10%;
+    background:whitesmoke;
+}
+    
+span{
+    font-family: sergio;
+    font-size: 140%;
+    color: black;
+    position: relative;
+    top:-40px;
+    opacity: 0;
+}
+
+}
+
+/*
+===============================================
+============== CSS for Profile ================
+===============================================
+*/
+
+
+.profile-container h1,.profile-container h2,.profile-container h3{
+    font-family: sergio;
+}
+
+ 
+.profile_caption{
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.profile_caption_text{
+    margin-left: -10%;
+}
+
+.profile-container hr{
+    border-top: 1px solid grey;    
+}
+
+.btn-trans{
+    background: transparent;
+}
+
+.profile-container .intro{
+    margin-bottom: 5%;
+}
+.profile-container .info{
+    border-left: 1px solid grey;
+}
+.profile-container .info .info-details{
+    display: inline-block;
+}
+
+.profile-container .info  .title{
+    width: 40%;
+}
+.profile-container .profile_section{
+    text-align: center;
+}
+.profile-container .profile_section .imgs{
+    display: inline-block;
+    margin: 0 5% 0 10%;
+}
+.right{
+    float: right;
+}
+
+.profile-container .btnnav{
+    margin: 3% 2%;
+    color: black;
+}
+/************************************************************************
+
+    ************* Beginning of media query Profile page *************
+
+***************************************************************************
+*/
+
+@media (max-width : 1200px){
+    .profile-container .info{
+        border: 0px solid black;
+        border-top:1px solid grey;
+    }
+    .info h3{
+
+    font-family: sergio;
+    font-size: 120%;
+    color: black;
+    position: relative;
+    top:-17px;
+    opacity: 1;
+
+}
+}
+
+/*
+===============================================
+============== CSS for Portfolio ==============
+===============================================
+*/
+.portfolio-container{
+    min-width: 350px;
+}
+.portfolio-container .row{
+    margin-bottom: 2%;
+}
+
+.portfolio-container h1,.portfolio-container h2{
+    font-family: sergio;
+}
+.portfolio_header_content{
+    display: inline-block;
+    margin-top: 3%;
+}
+
+.portfolio-container hr{
+    border-bottom: 1px solid grey;
+}
+
+.portfolio-container .portofio_pics{
+    margin: 2%;
+    width: 300px;
+    height: 300px;
+    border: 1px solid grey;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .campernews{
+    background: url(../images/portfolio/camper%20news.png) no-repeat;
+    background-size: contain;
+    background-position: center;  
+}
+
+.portfolio-container  .pomodoro{
+    background: url(../images/portfolio/pomodoro.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.portfolio-container  .simongame{
+    background: url(../images/portfolio/simon%20game.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .tictactoe{
+    background: url(../images/portfolio/tictactoe2.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .wikiviewer{
+    background: url(../images/portfolio/wiki%20viewer.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .weather{
+    background: url(../images/portfolio/weather.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .twitch{
+    background: url(../images/portfolio/twitch%20tv.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .quotemachine{
+    background: url(../images/portfolio/random%20quote%20machine.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container  .calculator{
+    background: url(../images/portfolio/calculator.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.portfolio-container .portofio_pics .portfolio_pics_img_container h1{
+    text-align: center;
+    opacity: 0;
+    color: white;
+    margin: 30% 0 ;
+}
+
+.portfolio-container .portofio_pics:hover .portfolio_pics_img_container h1{
+    opacity: 1;
+}
+
+.portfolio-container .portofio_pics:hover .portfolio_pics_img_container{
+    background: black;
+    opacity: 0.8;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.portfolio-container .btnnav{
+    margin: 3% 2%;    
+}
+/************************************************************************
+
+    ************* Beginning of media query Portfolio page*************
+
+***************************************************************************
+*/
+
+@media(max-width : 800px){
+    .portfolio_content{
+    margin: 0 18%;
+    width: 100%;
+    }
+    
+    .tags,.profilebtn,.portfoliobtn,.contactbtn,.homebtn{
+        display: none;
+    }
+
+}
+
+/*
+===============================================
+============== CSS for Contact ==============
+===============================================
+*/
+
+.contact-container .contact_caption{
+    display: inline-table;
+    margin-top: 3%;
+}
+.contact-container .contact_caption_text{
+    margin-left: -10%;
+}
+
+.contact-container .btnnav{
+    margin: 3% 2%;
+}
+
+.contact-container h1,h2,h3{
+    font-family: sergio;
+    font-size: 125%;
+}
+
+.contact-container hr{
+    border-bottom: 1px solid grey;
+}
+
+.contact-container .contact_info h3{
+    display: inline-block;
+    width: 30%;
+}
+
+.contact-container .contact_info{
+    border: 1px solid #e5e1e1;
+    padding: 20px;
+}
+
+.contact-container .form-control{
+    background: transparent;
+    margin: 15px;
+}
+
+.contact-container .btn_send{
+    padding-bottom: 30px;
+    background: #5252b5;
+}
+
+
+
+@media(min-width : 500px){
+  .nav-icons{
+     display: inline-block;
+    width: 40%;
+    margin: 0% 0 0 10% ;
+}
+
+     .fa{
+    margin: 10% 10% 0 0%;
+}
+}
+
+
+@media(max-width : 570px){
+  .nav-icons{
+     display: inline-block;
+    width: 100%;
+    margin: 0 0 0 0% ;
+}
+
+     .fa{
+    margin: 10% 10% 0 0%;
+}
+}
+
+@media (min-width : 800px){
+     .nav-icons{
+    width: 50%;
+    margin: 0 0 0 10% ;
+    display: none;
+}
+
+ .fa{
+    margin: 0% 10% 0 0%;
+}
+    
+}
