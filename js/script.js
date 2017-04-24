@@ -13,8 +13,8 @@ setTimeout(function(){
 });
 },1000);
 
-//$('.home').hide();
-$('.profile-container').hide();
+$('.home').hide();
+//$('.profile-container').hide();
 //$('.portfolio-container').hide();
 $('.contact-container').hide();
 

@@ -153,6 +153,17 @@ a:hover{
 
 }
 
+.skills_section h1{
+    text-align: center;
+}
+
+.skills_section .row{
+}
+
+.skills_section .progress{
+    margin-top: 20px;
+}
+
 
 /************************************************************************
 
