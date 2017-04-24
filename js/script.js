@@ -30,7 +30,7 @@ $('.contact_link').click(function(){
     displayHome(".home",".contact-container");
 });
 
-$('.homebtn,.home-nav-icon').click(function(){
+$('.homebtn,.homebtn2,.home-nav-icon').click(function(){
     displayNav(".current",".home");
 });
 
