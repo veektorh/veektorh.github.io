@@ -248,9 +248,10 @@ h1, h2, h3, h4, h5, h6, figure {
 }
 #fh5co-header .display-tc .profile-thumb,
 .fh5co-cover .display-tc .profile-thumb {
-  background-size: cover !important;
-  background-position: center center;
-  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* background-position: center center; */
+  /* background-repeat: no-repeat; */
+  
   position: relative;
   height: 200px;
   width: 200px;
