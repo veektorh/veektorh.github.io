@@ -56,7 +56,7 @@
 	<div class="fh5co-loader"></div>
 
 	<div id="page">
-		<header id="fh5co-header" class="fh5co-cover js-fullheight custom-jumbotron" role="banner" style="background-image:url(images/cover_bg_3.jpg);"
+		<header id="fh5co-header" class="fh5co-cover js-fullheight custom-jumbotron" role="banner" 
 		 data-stellar-background-ratio="0.5">
 			<!--<div class="overlay"></div>-->
 			<div class="container ">
@@ -212,7 +212,7 @@
 		<!-- Main -->
 		<script src="js/main.js"></script>
 		<script src="js/love.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
+		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script> -->
 		<script>
 			var pageOpen = 0;
 			$(document).ready(function () {
@@ -225,26 +225,26 @@
 
 
 			});
-			$(window).on('scroll', function () {
-				var y_scroll_pos = window.pageYOffset;
-				var scroll_pos_test = 800;             // set to whatever you want it to be
+			// $(window).on('scroll', function () {
+			// 	var y_scroll_pos = window.pageYOffset;
+			// 	var scroll_pos_test = 800;             // set to whatever you want it to be
 
-				if (y_scroll_pos > scroll_pos_test) {
-					pageOpen== 0 ? playMusic() : null;
-					//pageOpen playMusic();
-				}
-			});
+			// 	if (y_scroll_pos > scroll_pos_test) {
+			// 		pageOpen== 0 ? playMusic() : null;
+			// 		//pageOpen playMusic();
+			// 	}
+			// });
 
-			function playMusic() {
-				pageOpen++;
-				var audio = new Audio('images/chi/audio.mp3');
-				audio.play();
-				// var sound = new Howl({
-				// 	src: ['images/chi/audio.mp3']
-				// });
+			// function playMusic() {
+			// 	pageOpen++;
+			// 	var audio = new Audio('images/chi/audio.mp3');
+			// 	audio.play();
+			// 	// var sound = new Howl({
+			// 	// 	src: ['images/chi/audio.mp3']
+			// 	// });
 
-				// sound.play();
-			}
+			// 	// sound.play();
+			// }
 		</script>
 </body>
 
