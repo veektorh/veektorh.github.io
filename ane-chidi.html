@@ -211,7 +211,7 @@
 		<!-- Main -->
 		<script src="js/main.js"></script>
 		<script src="js/love.js"></script>
-		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script>
 		<script>
 			 var pageOpen = 0;
 			// $(document).ready(function () {
@@ -227,24 +227,23 @@
 
 			$(window).on('scroll', function () {
 				var y_scroll_pos = window.pageYOffset;
-				var scroll_pos_test = 400;             // set to whatever you want it to be
+				var scroll_pos_test = 300;             // set to whatever you want it to be
 
 				if (y_scroll_pos > scroll_pos_test) {
 					pageOpen== 0 ? playMusic() : null;
-					//pageOpen playMusic();
 				}
 			});
 
 			function playMusic() {
 				pageOpen++;
-				var audio = new Audio('images/chi/audio.mp3');
-				audio.play();
-				alert('hello');
-				// var sound = new Howl({
-				// 	src: ['images/chi/audio.mp3']
-				// });
+				// var audio = new Audio('images/chi/audio.mp3');
+				// audio.play();
+				// alert('hello');
+				var sound = new Howl({
+					src: ['images/chi/audio.mp3']
+				});
 
-				// sound.play();
+				sound.play();
 			}
 
 		</script>
