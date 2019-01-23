@@ -213,7 +213,7 @@
 		<script src="js/love.js"></script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.1.1/howler.min.js"></script> -->
 		<script>
-			// var pageOpen = 0;
+			 var pageOpen = 0;
 			// $(document).ready(function () {
 			// 	//playMusic();
 			// 	// $(".gallery-img").click(function () {
@@ -224,26 +224,28 @@
 
 
 			// });
-			// $(window).on('scroll', function () {
-			// 	var y_scroll_pos = window.pageYOffset;
-			// 	var scroll_pos_test = 800;             // set to whatever you want it to be
 
-			// 	if (y_scroll_pos > scroll_pos_test) {
-			// 		pageOpen== 0 ? playMusic() : null;
-			// 		//pageOpen playMusic();
-			// 	}
-			// });
+			$(window).on('scroll', function () {
+				var y_scroll_pos = window.pageYOffset;
+				var scroll_pos_test = 400;             // set to whatever you want it to be
 
-			// function playMusic() {
-			// 	pageOpen++;
-			// 	var audio = new Audio('images/chi/audio.mp3');
-			// 	audio.play();
-			// 	// var sound = new Howl({
-			// 	// 	src: ['images/chi/audio.mp3']
-			// 	// });
+				if (y_scroll_pos > scroll_pos_test) {
+					pageOpen== 0 ? playMusic() : null;
+					//pageOpen playMusic();
+				}
+			});
 
-			// 	// sound.play();
-			// }
+			function playMusic() {
+				pageOpen++;
+				var audio = new Audio('images/chi/audio.mp3');
+				audio.play();
+				// var sound = new Howl({
+				// 	src: ['images/chi/audio.mp3']
+				// });
+
+				// sound.play();
+			}
+
 		</script>
 </body>
 
