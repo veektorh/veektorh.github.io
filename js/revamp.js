@@ -33,26 +33,28 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // Mobile nav toggle
-const toggle = document.getElementById('navToggle');
-const links  = document.querySelector('.nav__links');
+const toggle   = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
 
 function openNav() {
-  links.classList.add('open');
+  mobileMenu.classList.add('open');
+  mobileMenu.setAttribute('aria-hidden', 'false');
   toggle.classList.add('open');
-  document.body.classList.add('nav-open');
   toggle.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('nav-open');
 }
 function closeNav() {
-  links.classList.remove('open');
+  mobileMenu.classList.remove('open');
+  mobileMenu.setAttribute('aria-hidden', 'true');
   toggle.classList.remove('open');
-  document.body.classList.remove('nav-open');
   toggle.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('nav-open');
 }
 
 toggle.addEventListener('click', () => {
-  links.classList.contains('open') ? closeNav() : openNav();
+  mobileMenu.classList.contains('open') ? closeNav() : openNav();
 });
-links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
 // Back to top
@@ -102,7 +104,7 @@ function type() {
 setTimeout(type, 800);
 
 // Active nav highlight
-const navAnchors = document.querySelectorAll('.nav__links a[data-nav]');
+const navAnchors = document.querySelectorAll('[data-nav]');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
