@@ -1,5 +1,17 @@
 /* revamp.js — Bolum Victor Portfolio 2026 */
 
+// Theme toggle
+const root = document.documentElement;
+const themeToggle = document.getElementById('themeToggle');
+const saved = localStorage.getItem('theme') || 'dark';
+root.setAttribute('data-theme', saved);
+
+themeToggle.addEventListener('click', () => {
+  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+});
+
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
 

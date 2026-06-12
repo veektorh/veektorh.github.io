@@ -22,7 +22,18 @@
   --transition: 0.3s ease;
 }
 
-/* ---------- RESET ---------- */
+/* ---------- LIGHT MODE ---------- */
+[data-theme="light"] {
+  --bg:          #ffffff;
+  --bg-alt:      #f6f8fa;
+  --surface:     #eaeef2;
+  --border:      #d0d7de;
+  --text:        #1f2328;
+  --text-muted:  #656d76;
+  --accent:      #0969da;
+  --accent-glow: rgba(9, 105, 218, 0.1);
+  --green:       #1a7f37;
+}
 *,
 *::before,
 *::after {
@@ -137,6 +148,28 @@ ul {
   border-radius: 2px;
   transition: var(--transition);
 }
+
+/* ---------- THEME TOGGLE ---------- */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
+  flex-shrink: 0;
+}
+.theme-toggle:hover { border-color: var(--accent); color: var(--accent); transform: rotate(20deg); }
+.theme-toggle svg { width: 17px; height: 17px; }
+.theme-toggle .icon-moon { display: block; }
+.theme-toggle .icon-sun  { display: none; }
+[data-theme="light"] .theme-toggle .icon-moon { display: none; }
+[data-theme="light"] .theme-toggle .icon-sun  { display: block; }
 
 /* ---------- BUTTONS ---------- */
 .btn-primary {
