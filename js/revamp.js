@@ -1,16 +1,23 @@
 /* revamp.js — Bolum Victor Portfolio 2026 */
 
-// Theme toggle
+// Safe localStorage helpers
+function getTheme() {
+  try { return localStorage.getItem('theme') || 'dark'; } catch(e) { return 'dark'; }
+}
+function setTheme(t) {
+  try { localStorage.setItem('theme', t); } catch(e) {}
+}
+
+// Theme toggle (data-theme already set in <head> to avoid FOUC)
 const root = document.documentElement;
 const themeToggle = document.getElementById('themeToggle');
-const saved = localStorage.getItem('theme') || 'dark';
-root.setAttribute('data-theme', saved);
-
-themeToggle.addEventListener('click', () => {
-  const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    setTheme(next);
+  });
+}
 
 // Page load fade-in
 window.addEventListener('load', () => document.body.classList.remove('loading'));

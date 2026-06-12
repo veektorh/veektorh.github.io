@@ -782,9 +782,13 @@ ul {
   gap: 40px;
   transform: translateX(100%);
   transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden;
+  pointer-events: none;
 }
 .mobile-menu.open {
   transform: translateX(0);
+  visibility: visible;
+  pointer-events: auto;
 }
 .mobile-menu ul {
   display: flex;
@@ -874,8 +878,5 @@ ul {
   }
   .timeline__dot {
     left: -20px;
-  }
-  .contact__cards {
-    flex-direction: column;
   }
 }

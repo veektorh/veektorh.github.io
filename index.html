@@ -8,7 +8,7 @@
   <meta name="keywords" content="software developer, C#, ASP.NET Core, Angular, JavaScript, Nigeria" />
   <meta property="og:title" content="Bolum Victor — Software Developer" />
   <meta property="og:description" content="Senior Software Architect & Full-Stack Developer based in Nigeria" />
-  <meta property="og:image" content="images/p.jpg" />
+  <meta property="og:image" content="https://veektorh.github.io/images/p.jpg" />
   <meta property="og:url" content="https://veektorh.github.io" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="images/p.jpg" />
@@ -16,6 +16,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/revamp.css" />
+  <!-- Apply saved theme immediately to avoid FOUC -->
+  <script>try{document.documentElement.setAttribute('data-theme',localStorage.getItem('theme')||'dark')}catch(e){document.documentElement.setAttribute('data-theme','dark')}</script>
 </head>
 <body class="loading">
   <div class="cursor-glow" id="cursorGlow"></div>
@@ -27,7 +29,7 @@
       <ul class="nav__links nav__links--desktop">
         <li><a href="#about" data-nav>About</a></li>
         <li><a href="#skills" data-nav>Skills</a></li>
-        <li><a href="#contact" class="btn-outline">Contact</a></li>
+        <li><a href="#contact" class="btn-outline" data-nav>Contact</a></li>
       </ul>
       <div class="nav__controls">
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
@@ -46,7 +48,7 @@
     <ul>
       <li><a href="#about" data-nav>About</a></li>
       <li><a href="#skills" data-nav>Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
     </ul>
   </div>
 
