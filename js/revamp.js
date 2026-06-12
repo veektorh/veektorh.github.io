@@ -12,6 +12,16 @@ themeToggle.addEventListener('click', () => {
   localStorage.setItem('theme', next);
 });
 
+// Page load fade-in
+window.addEventListener('load', () => document.body.classList.remove('loading'));
+
+// Cursor glow
+const glow = document.getElementById('cursorGlow');
+window.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top  = e.clientY + 'px';
+}, { passive: true });
+
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -77,19 +87,17 @@ function type() {
 }
 setTimeout(type, 800);
 
-// Smooth active nav link highlight
-const sections = document.querySelectorAll('section[id], .hero');
-const navLinks = document.querySelectorAll('.nav__links a[href^="#"]');
-
+// Active nav highlight
+const navAnchors = document.querySelectorAll('.nav__links a[data-nav]');
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
-      navLinks.forEach(a => {
-        a.style.color = a.getAttribute('href') === `#${id}` ? 'var(--text)' : '';
+      navAnchors.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
       });
     }
   });
 }, { rootMargin: '-30% 0px -60% 0px' });
 
-sections.forEach(s => sectionObserver.observe(s));
+document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));

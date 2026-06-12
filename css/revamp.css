@@ -22,6 +22,25 @@
   --transition: 0.3s ease;
 }
 
+/* ---------- PAGE LOAD ---------- */
+body.loading { opacity: 0; }
+body { transition: opacity 0.5s ease; opacity: 1; }
+
+/* ---------- CURSOR GLOW ---------- */
+.cursor-glow {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent-glow) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition: left 0.12s ease, top 0.12s ease;
+  opacity: 0.6;
+}
+[data-theme="light"] .cursor-glow { opacity: 0.25; }
+
 /* ---------- LIGHT MODE ---------- */
 [data-theme="light"] {
   --bg:          #ffffff;
@@ -170,6 +189,50 @@ ul {
 .theme-toggle .icon-sun  { display: none; }
 [data-theme="light"] .theme-toggle .icon-moon { display: none; }
 [data-theme="light"] .theme-toggle .icon-sun  { display: block; }
+
+/* ---------- ACTIVE NAV ---------- */
+.nav__links a[data-nav] {
+  position: relative;
+}
+.nav__links a[data-nav]::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+.nav__links a[data-nav].active::after { transform: scaleX(1); }
+.nav__links a[data-nav].active { color: var(--text); }
+
+/* ---------- AVAILABILITY BADGE ---------- */
+.hero__availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(63, 185, 80, 0.1);
+  border: 1px solid rgba(63, 185, 80, 0.3);
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+.availability__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(63, 185, 80, 0.4); }
+  50%       { box-shadow: 0 0 0 6px rgba(63, 185, 80, 0); }
+}
 
 /* ---------- BUTTONS ---------- */
 .btn-primary {

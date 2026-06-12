@@ -17,15 +17,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/revamp.css" />
 </head>
-<body>
+<body class="loading">
+  <div class="cursor-glow" id="cursorGlow"></div>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#home" class="nav__logo">VB<span class="accent">.</span></a>
-      <ul class="nav__links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
         <li><a href="#contact" class="btn-outline">Contact</a></li>
       </ul>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
@@ -45,6 +46,10 @@
       <p class="hero__greeting reveal">Hi, I'm</p>
       <h1 class="hero__name reveal">Bolum Victor<span class="accent">.</span></h1>
       <h2 class="hero__title reveal">Senior Software Architect<br /><span class="typewriter" id="typewriter"></span></h2>
+      <div class="hero__availability reveal">
+        <span class="availability__dot"></span>
+        <span>Open to work</span>
+      </div>
       <p class="hero__bio reveal">I build robust, scalable software systems — from backend APIs to full-stack web applications.</p>
       <div class="hero__actions reveal">
         <a href="#skills" class="btn-primary">My Skills</a>
