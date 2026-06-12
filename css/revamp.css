@@ -562,7 +562,7 @@ ul {
 }
 
 /* ===================================================
-   CONTACT
+   CONTACT — social links
    =================================================== */
 .contact__sub {
   color: var(--text-muted);
@@ -571,15 +571,16 @@ ul {
   margin-bottom: 40px;
   max-width: 480px;
 }
-.contact__cards {
+.contact__socials {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 480px;
 }
-.contact__card {
+.social-link {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 16px;
   padding: 18px 24px;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -587,23 +588,17 @@ ul {
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-muted);
-  transition:
-    border-color var(--transition),
-    color var(--transition),
-    transform var(--transition);
-  flex: 1 1 240px;
+  transition: border-color var(--transition), color var(--transition), transform var(--transition);
 }
-.contact__card:hover {
+.social-link:hover {
   border-color: var(--accent);
   color: var(--text);
-  transform: translateY(-3px);
+  transform: translateX(6px);
 }
-.contact__card svg {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
-  color: var(--accent);
-}
+.social-link svg:first-child { width: 20px; height: 20px; flex-shrink: 0; color: var(--accent); }
+.social-link span { flex: 1; }
+.social-link .arrow { width: 16px; height: 16px; opacity: 0; transition: opacity var(--transition); }
+.social-link:hover .arrow { opacity: 1; }
 
 /* ===================================================
    FOOTER
