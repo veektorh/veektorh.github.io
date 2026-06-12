@@ -35,11 +35,25 @@ window.addEventListener('scroll', () => {
 // Mobile nav toggle
 const toggle = document.getElementById('navToggle');
 const links  = document.querySelector('.nav__links');
+
+function openNav() {
+  links.classList.add('open');
+  toggle.classList.add('open');
+  document.body.classList.add('nav-open');
+  toggle.setAttribute('aria-expanded', 'true');
+}
+function closeNav() {
+  links.classList.remove('open');
+  toggle.classList.remove('open');
+  document.body.classList.remove('nav-open');
+  toggle.setAttribute('aria-expanded', 'false');
+}
+
 toggle.addEventListener('click', () => {
-  const open = links.classList.toggle('open');
-  toggle.setAttribute('aria-expanded', open);
+  links.classList.contains('open') ? closeNav() : openNav();
 });
-links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('open')));
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', closeNav));
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
 
 // Back to top
 document.getElementById('backToTop').addEventListener('click', () => {
