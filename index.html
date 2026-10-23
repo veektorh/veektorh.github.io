@@ -31,7 +31,7 @@
 
     <h1 id="about"># Bolum Victor</h1>
     <p class="tagline">&gt; Senior Software Architect · open to work<span class="cursor" aria-hidden="true"></span></p>
-    <p class="intro">I build robust, scalable software systems, from backend APIs to full-stack web applications. Seven-plus years across enterprise, fintech and technology, more than four of them fully remote. I like clean, maintainable code that scales, and engineering that has real-world impact.</p>
+    <p class="intro">I build robust, scalable software systems, from backend APIs to full-stack web applications. <span data-since="2017">9</span>+ years across enterprise, fintech and technology, <span data-since="2021">5</span>+ of them fully remote. I like clean, maintainable code that scales, and engineering that has real-world impact.</p>
 
     <h2>## Install</h2>
     <pre>$ hire bolum-victor --based-in=nigeria --remote</pre>
@@ -53,5 +53,10 @@
     <h2>## License</h2>
     <p>© Bolum Victor. All rights reserved.</p>
   </main>
+  <script>
+    document.querySelectorAll('[data-since]').forEach(function (el) {
+      el.textContent = new Date().getFullYear() - Number(el.dataset.since);
+    });
+  </script>
 </body>
 </html>
